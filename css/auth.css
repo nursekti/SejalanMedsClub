@@ -1,0 +1,213 @@
+/* === AUTH PAGE STYLING === */
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #fef8f4 0%, #f0e8ff 50%, #f8e8e0 100%);
+    color: #1a237e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .auth-container {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(26, 35, 126, 0.15);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .auth-container h1,
+  .auth-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 10px;
+  }
+  
+  .auth-container p {
+    font-size: 14px;
+    color: #5c6bc0;
+    margin-bottom: 25px;
+  }
+  
+  .auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+  }
+  
+  .auth-container label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a237e;
+  }
+  
+  .auth-container input {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid rgba(26, 35, 126, 0.2);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    color: #1a237e;
+  }
+  
+  .auth-container input:focus {
+    border-color: #1a237e;
+    box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.1);
+  }
+  
+  .auth-container button {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
+  }
+  
+  .auth-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 35, 126, 0.4);
+  }
+  
+  .auth-container .error {
+    color: #e91e63;
+    font-size: 13px;
+    margin-top: -5px;
+    text-align: left;
+  }
+  
+  .auth-container .auth-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #5c6bc0;
+  }
+  
+  .auth-container .auth-footer a,
+  .auth-container a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  
+  .auth-container .auth-footer a:hover,
+  .auth-container a:hover {
+    color: #c2185b;
+    text-decoration: underline;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 480px) {
+    .auth-container {
+      padding: 30px 20px;
+    }
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #5c6bc0;
+    font-size: 14px;
+  }
+  
+  .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: white;
+    border: 1px solid rgba(26, 35, 126, 0.2);
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #1a237e;
+  }
+  
+  .google-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.15);
+  }
+  
+  .google-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Forgot password link */
+  .forgot-password-link {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+  }
+
+  .forgot-password-link a {
+    font-size: 13px;
+    color: #5c6bc0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .forgot-password-link a:hover {
+    color: #e91e63;
+    text-decoration: underline;
+  }
+
+  /* Loading state for buttons */
+  .auth-container button.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.85;
+  }
+
+  .auth-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  /* Spinner animation */
+  .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  .google-btn .spinner {
+    border: 2px solid rgba(26, 35, 126, 0.2);
+    border-top-color: #1a237e;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Button content alignment when loading */
+  .auth-container button.loading,
+  .google-btn.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

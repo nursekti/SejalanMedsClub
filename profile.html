@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Saya - Sejalan Meds Club</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="logo"><img src="assets/logo.png" alt="Sejalan Medsclub"></div>
+      <div>
+        <h1>Sejalan Meds Club</h1>
+        <div style="font-size:12px;color:#6b7280">Platform Mahasiswa Kedokteran</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="kelas.html">Kelas & Webinar</a>
+      <a href="shop.html">Shop</a>
+      <a href="fotografi.html">Fotografi</a>
+      <a href="cart.html">🛒</a>
+
+      <a href="login.html" class="cta" id="loginBtn">Masuk/Daftar</a>
+
+      <div class="user-menu hidden" id="userMenu">
+        <button id="userDropdownBtn">
+          <span id="usernameDisplay">Pengguna</span> ▾
+        </button>
+        <div class="dropdown hidden" id="dropdownMenu">
+          <a href="profile.html">Profil Saya</a>
+          <a href="history.html">Riwayat Transaksi</a>
+          <hr>
+          <button id="logoutBtnDropdown" class="logout-btn">Keluar</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <a href="profile.html" class="active">👤 Profil</a>
+        <a href="history.html">🧾 Riwayat Transaksi</a>
+        <button class="logout" id="logoutBtn">Keluar</button>
+      </aside>
+
+      <!-- Content -->
+      <section class="content">
+        <div class="profile-card">
+          <h2>Profil Saya</h2>
+          <form id="profileForm">
+            <div class="profile-field">
+              <label>Nama Lengkap <span style="color:#ef4444;">*</span></label>
+              <input type="text" id="profileName" placeholder="Masukkan nama lengkap" required />
+              <span id="nameError" class="field-error" style="display:none;color:#ef4444;font-size:12px;margin-top:4px;">Nama tidak boleh kosong</span>
+            </div>
+            <div class="profile-field">
+              <label>Email</label>
+              <input type="email" id="profileEmail" placeholder="Masukkan email (opsional)" />
+            </div>
+            <div class="profile-field">
+              <label>No. Telepon</label>
+              <input type="tel" id="profilePhone" placeholder="Masukkan nomor telepon (opsional)" />
+            </div>
+            
+            <div id="profileMessage" style="display:none;padding:10px 14px;border-radius:6px;margin-top:12px;font-size:14px;"></div>
+            
+            <button type="submit" class="save-btn" id="saveProfileBtn">Simpan Profil</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="logo" style="width:44px;height:44px">FD</div>
+      <div>
+        <div style="font-weight:700">Future Doctor's Hub</div>
+        <small>Platform Mahasiswa Kedokteran</small>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@company.com">info@company.com</a></p>
+        <p>HP: <a href="tel:+628123456789">+62 812-3456-789</a></p>
+      </div>
+
+      <div class="social">
+        <h4>Follow Us</h4>
+        <p>
+          <a href="https://instagram.com/yourcompany" target="_blank">Instagram</a> | 
+          <a href="https://tiktok.com/@yourcompany" target="_blank">TikTok</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/auth-state.js"></script>
+  <script type="module" src="js/profile.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

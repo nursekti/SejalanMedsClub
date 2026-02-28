@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keranjang Belanja | Sejalan Meds Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <div class="logo"><img src="assets/logo.png" alt="Sejalan Medsclub"></div>
+      <div>
+        <h1>Sejalan Meds Club</h1>
+        <div style="font-size:12px;color:#6b7280">Platform Mahasiswa Kedokteran</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="kelas.html">Kelas & Webinar</a>
+      <a href="shop.html">Shop</a>
+      <a href="fotografi.html">Fotografi</a>
+      <a href="cart.html" class="active">🛒</a>
+
+      <!-- tombol login default -->
+      <a href="login.html" class="cta" id="loginBtn">Masuk/Daftar</a>
+
+      <!-- dropdown user (hidden saat belum login) -->
+      <div class="user-menu hidden" id="userMenu">
+        <button id="userDropdownBtn">
+          <span id="usernameDisplay">Pengguna</span> ▾
+        </button>
+        <div class="dropdown hidden" id="dropdownMenu">
+          <a href="profile.html">Profil Saya</a>
+          <a href="history.html">Riwayat Transaksi</a>
+          <hr>
+          <button id="logoutBtn" class="logout-btn">Keluar</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="container">
+
+      <h2>Keranjang Belanja</h2>
+
+      <div class="cart-page">
+        <!-- Select All Controls -->
+        <div class="cart-select-all" id="selectAllControls" style="display:none; margin-bottom:16px; padding:12px 16px; background:#f9fafb; border-radius:8px; border:1px solid #e5e7eb;">
+          <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+            <input type="checkbox" id="selectAllCheckbox" checked style="width:18px; height:18px; cursor:pointer;">
+            <span style="font-weight:600; color:#374151;">Pilih Semua</span>
+          </label>
+        </div>
+        
+        <!-- Daftar item -->
+        <div class="cart-items" id="cartItems">
+          <p style="text-align:center;color:#6b7280;margin-top:30px;">Memuat keranjang...</p>
+        </div>
+
+        <!-- Ringkasan -->
+        <div class="cart-summary">
+          <h3>Ringkasan Belanja</h3>
+          <p>Total Item: <strong id="totalItems">0</strong></p>
+          <p>Total Harga: <strong id="totalPrice">Rp 0</strong></p>
+          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="logo" style="width:44px;height:44px">FD</div>
+      <div>
+        <div style="font-weight:700">Future Doctor's Hub</div>
+        <small>Platform Mahasiswa Kedokteran</small>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@company.com">info@company.com</a></p>
+        <p>HP: <a href="tel:+628123456789">+62 812-3456-789</a></p>
+      </div>
+      <div class="social">
+        <h4>Follow Us</h4>
+        <p>
+          <a href="#">Instagram</a> | <a href="#">TikTok</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script type="module" src="js/auth-state.js"></script>
+  <script type="module" src="js/cart.js"></script>
+</body>
+</html>

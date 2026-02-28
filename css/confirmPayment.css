@@ -1,0 +1,102 @@
+.confirm-payment {
+    background: rgba(255,255,255,0.9);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(26,35,126,0.1);
+    margin-top: 40px;
+  }
+  
+  .confirm-payment h2 {
+    color: #1a237e;
+  }
+  
+  .confirm-payment h3 {
+    color: #1a237e;
+    font-size: 1.1rem;
+  }
+  
+  .bank-transfer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .bank-transfer li {
+    margin: 8px 0;
+    color: #5c6bc0;
+  }
+  
+  .bank-transfer strong {
+    color: #1a237e;
+  }
+  
+  #proofPreview img {
+    margin-top: 10px;
+    border-radius: 8px;
+    max-width: 240px;
+    box-shadow: 0 4px 12px rgba(26,35,126,0.15);
+  }
+  
+  .qris-payment img {
+    border-radius: 8px;
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(26,35,126,0.1);
+  }
+  
+  /* Submit button styling */
+  .confirm-payment button[type="submit"],
+  .confirm-payment .submit-btn {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(26,35,126,0.3);
+  }
+  
+  .confirm-payment button[type="submit"]:hover,
+  .confirm-payment .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26,35,126,0.4);
+  }
+  
+  /* Timer bar styling */
+  .timer-bar {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border: 1px solid rgba(26,35,126,0.1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    color: #1a237e;
+  }
+  
+  .timer-bar.warning {
+    background: linear-gradient(135deg, #ffecb3 0%, #ffe082 100%);
+  }
+  
+  .timer-bar.danger {
+    background: linear-gradient(135deg, #ffcdd2 0%, #ef9a9a 100%);
+  }
+  
+  /* Info text */
+  .confirm-payment p {
+    color: #5c6bc0;
+  }
+  
+  /* File upload styling */
+  .confirm-payment input[type="file"] {
+    border: 2px dashed rgba(26,35,126,0.2);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  
+  .confirm-payment input[type="file"]:hover {
+    border-color: #1a237e;
+  }
+  

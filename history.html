@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riwayat Transaksi - Sejalan Meds Club</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <style>
+    .order-row:hover {
+      background-color: rgba(26, 35, 126, 0.05);
+      transition: background-color 0.2s ease;
+    }
+    .order-row td {
+      padding: 12px 8px;
+      vertical-align: middle;
+    }
+    .order-row {
+      cursor: pointer;
+    }
+    
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+      .order-row td {
+        padding: 8px 6px;
+        font-size: 12px;
+      }
+      .history-card h2 {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .history-section {
+        margin-bottom: 16px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .order-row td {
+        padding: 6px 4px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="logo"><img src="assets/logo.png" alt="Sejalan Medsclub"></div>
+      <div>
+        <h1>Sejalan Meds Club</h1>
+        <div style="font-size:12px;color:#6b7280">Platform Mahasiswa Kedokteran</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="kelas.html">Kelas & Webinar</a>
+      <a href="shop.html">Shop</a>
+      <a href="fotografi.html">Fotografi</a>
+      <a href="cart.html">🛒</a>
+      <a href="login.html" class="cta" id="loginBtn">Masuk/Daftar</a>
+
+      <div class="user-menu hidden" id="userMenu">
+        <button id="userDropdownBtn">
+          <span id="usernameDisplay">Pengguna</span> ▾
+        </button>
+        <div class="dropdown hidden" id="dropdownMenu">
+          <a href="profile.html">Profil Saya</a>
+          <a href="history.html">Riwayat Transaksi</a>
+          <hr>
+          <button id="logoutBtnDropdown" class="logout-btn">Keluar</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <a href="profile.html">👤 Profil</a>
+        <a href="history.html" class="active">🧾 Riwayat Transaksi</a>
+        <button class="logout" id="logoutBtn">Keluar</button>
+      </aside>
+
+      <section class="content">
+        <!-- Kelas & Webinar History -->
+        <div class="history-card history-section">
+          <h2>📚 Kelas & Webinar</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Item</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="kelasHistoryList">
+                <tr><td colspan="4">Memuat data...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Shop Products History -->
+        <div class="history-card history-section" style="margin-top: 16px;">
+          <h2>🛒 Produk Shop</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Item</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="shopHistoryList">
+                <tr><td colspan="4">Memuat data...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="logo" style="width:44px;height:44px">FD</div>
+      <div>
+        <div style="font-weight:700">Future Doctor's Hub</div>
+        <small>Platform Mahasiswa Kedokteran</small>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@company.com">info@company.com</a></p>
+        <p>HP: <a href="tel:+628123456789">+62 812-3456-789</a></p>
+      </div>
+
+      <div class="social">
+        <h4>Follow Us</h4>
+        <p>
+          <a href="https://instagram.com/yourcompany" target="_blank">Instagram</a> | 
+          <a href="https://tiktok.com/@yourcompany" target="_blank">TikTok</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/auth-state.js"></script>
+  <script type="module" src="js/history.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

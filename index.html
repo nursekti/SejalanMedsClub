@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sejalan Meds Club </title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body padding-top: 80px;>
+
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="assets/logo.png" alt="Sejalan Medsclub"></div>
+        <div>
+          <h1>Sejalan Meds Club</h1>
+          <div style="font-size:12px;color:#6b7280">Platform Mahasiswa Kedokteran</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="kelas.html">Kelas & Webinar</a>
+        <a href="shop.html">Shop</a>
+        <a href="fotografi.html">Fotografi</a>
+        <a href="cart.html">🛒</a>
+
+        <!-- tombol login default -->
+        <a href="login.html" class="cta" id="loginBtn">Masuk/Daftar</a>
+
+        <!-- dropdown user (hidden saat belum login) -->
+        <div class="user-menu hidden" id="userMenu">
+          <button id="userDropdownBtn">
+            <span id="usernameDisplay">Pengguna</span> ▾
+          </button>
+          <div class="dropdown hidden" id="dropdownMenu">
+            <a href="profile.html">Profil Saya</a>
+            <a href="history.html">Riwayat Transaksi</a>
+            <hr>
+            <button id="logoutBtn" class="logout-btn">Keluar</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+      <main>
+        <div class="container">
+
+            <!-- HERO -->
+            <section id="home" class="hero" role="region" aria-label="Hero">
+              <div>
+                <h2>Belajar. Belanja. Berkarya.</h2>
+                <p>Semua kebutuhan mahasiswa kedokteran dalam satu platform: kelas, buku, merchandise, sampai jasa fotografi akademik.</p>
+                <a href="#courses" class="btn">Mulai Belajar</a>
+        
+                <div class="pill-icons">
+                  <div class="pill" title="Kelas">📚</div>
+                  <div class="pill" title="Shop">🛍️</div>
+                  <div class="pill" title="Fotografi">📸</div>
+                </div>
+              </div>
+        
+              <div class="hero-illus" aria-hidden="true">
+                <img src="assets/doctor.png" alt="Ilustrasi Dokter">
+              </div>
+              
+            </section>
+        
+            <!-- 3 PILARS -->
+            <div class="pillars" aria-label="Pilar utama">
+            <div class="section-title">
+              <h2>Ada apa aja sih?</h2>
+            </div>
+          
+            <div class="pillars-list">
+                <a href="kelas.html" class="card-link">
+                    <article class="card">
+                        <div style="display:flex;gap:12px;align-items:center">
+                          <div style="width:48px;height:48px;border-radius:10px;background:#e8faf0; display:flex;align-items:center;justify-content:center">🎓</div>
+                          <div>
+                            <h3>Kelas & Webinar</h3>
+                            <p class="muted">Materi, rekaman, dan persiapan ujian</p>
+                          </div>
+                        </div>
+                      </article>
+                </a>
+                <a href="shop.html" class="card-link">
+                    <article class="card">
+                        <div style="display:flex;gap:12px;align-items:center">
+                          <div style="width:48px;height:48px;border-radius:10px;background:#fff7e6; display:flex;align-items:center;justify-content:center">🛒</div>
+                          <div>
+                            <h3>Shop</h3>
+                            <p class="muted">Buku, merchandise, dan peralatan belajar</p>
+                          </div>
+                        </div>
+                      </article>
+                </a>
+                <a href="fotografi.html" class="card-link">
+                    <article class="card">
+                        <div style="display:flex;gap:12px;align-items:center">
+                          <div style="width:48px;height:48px;border-radius:10px;background:#f0f9ff; display:flex;align-items:center;justify-content:center">📸</div>
+                          <div>
+                            <h3>Fotografi</h3>
+                            <p class="muted">Jasa dokumentasi acara dan wisuda</p>
+                          </div>
+                        </div>
+                      </article>
+                </a>
+            </div>
+          </div>
+          
+        
+            <!-- ONGOING KELAS -->
+            <section class="home-section" id="ongoingKelasSection">
+              <div class="section-title">
+                <h2>🎓 Kelas Sedang Berlangsung</h2>
+                <a href="kelas.html" class="see-all-link">Lihat Semua →</a>
+              </div>
+              <div class="home-cards-grid" id="ongoingKelasGrid">
+                <div class="loading-placeholder">Memuat kelas...</div>
+              </div>
+            </section>
+
+            <!-- TOP PRODUCTS -->
+            <section class="home-section" id="topProductSection">
+              <div class="section-title">
+                <h2>🛒 Produk Terlaris</h2>
+                <a href="shop.html" class="see-all-link">Lihat Semua →</a>
+              </div>
+              <div class="home-cards-grid" id="topProductGrid">
+                <div class="loading-placeholder">Memuat produk...</div>
+              </div>
+            </section>
+
+            <!-- TESTIMONIAL -->
+            <div class="testimonial">
+                <div class="section-title">
+                    <h2>Apa kata mereka</h2>
+                </div>
+                <div class="testimonial-list">
+                    <article class="card">
+                      <div style="display:flex;gap:12px;align-items:center">
+                        <div class="avatar avatar-green">G</div>
+                        <div>
+                          <p class="muted">"Platform ini sangat membantu persiapan ujian kumulatif. Materi yang disajikan jelas dan mudah dipahami."</p>
+                          <h3>Ghazy, Mahasiswa FK UNS</h3>
+                        </div>
+                      </div>
+                    </article>
+                
+                    <article class="card">
+                      <div style="display:flex;gap:12px;align-items:center">
+                        <div class="avatar avatar-orange">A</div>
+                        <div>
+                          <p class="muted">"Aku banyak menemukan barang-barang kebutuhan yang kuperlukan untuk perkuliahan, seperti buku, jas lab, dll."</p>
+                          <h3>Affan, Mahasiswa FK UNS</h3>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+            </div>
+          </div>
+      </main>
+
+  <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-left">
+        <div class="logo" style="width:44px;height:44px">FD</div>
+        <div>
+          <div style="font-weight:700">Future Doctor's Hub</div>
+          <small>Platform Mahasiswa Kedokteran</small>
+        </div>
+    </div>
+  
+    <div class="footer-right">
+      <div class="contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@company.com">info@company.com</a></p>
+        <p>HP: <a href="tel:+628123456789">+62 812-3456-789</a></p>
+      </div>
+  
+      <div class="social">
+        <h4>Follow Us</h4>
+        <p>
+          <a href="https://instagram.com/yourcompany" target="_blank">Instagram</a> | 
+          <a href="https://tiktok.com/@yourcompany" target="_blank">TikTok</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+<!-- PRODUCT/KELAS MODAL -->
+<div id="homeModal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <div class="modal-body">
+      <img id="homeModalImage" src="assets/placeholder.png" alt="Gambar">
+      <div class="modal-info">
+        <span id="homeModalBadge" class="modal-badge"></span>
+        <h2 id="homeModalTitle">Judul</h2>
+        <p id="homeModalDescription">Deskripsi...</p>
+        <p class="price"><strong id="homeModalPrice">Rp 0</strong></p>
+        
+        <div class="modal-actions">
+          <button id="homeModalBuyNow" class="btn-primary">Beli Sekarang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="module" src="js/auth-state.js" defer></script>
+  <script type="module" src="js/home.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
